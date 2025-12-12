@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_page</title>
+<style>
+    .logo{
+        width: 300px;
+        height:100px;
+    }
+    .tagline{
+        font-style: italic;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .enter_credentials{
+        color: rgb(92, 48, 48);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .l1{
+        width: 400px;
+        height: 50px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+        margin-left: 50px;
+       }
+    .l2{
+        width: 400px;
+        height: 50px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+        margin-left: 50px;
+        }
+        .login_button{
+         width: 120px;
+         height: 35px;
+         cursor:pointer;
+         color: greenyellow;
+         font-size: 25px;
+         font-weight: bold;
+         border-radius: 5px;
+         background-color: white;
+         margin-left: 200px;
+         margin-top: 20px;
+         display: block;
+          transition:background-color 0.15s,
+         color 0.15s;
+        }
+        .login_button:hover{
+        color:white;
+        background-color: yellowgreen;
+        }
+
+        .error {
+            color:red ;
+            font-size: 25px;
+            font-weight:lighter;
+        }
+
+        .dont_have_account{
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .sign_up_button{
+             width: 120px;
+         height: 35px;
+         cursor:pointer;
+         color: greenyellow;
+         font-size: 25px;
+         font-weight: bold;
+         border-radius: 5px;
+         background-color: white;
+         margin-left: 20px;
+         margin-top: 20px;
+         display:inline-block;
+          transition:background-color 0.15s,
+         color 0.15s;
+        }
+        .sign_up_button:hover{
+            background-color: greenyellow;
+            color: white;
+        }
+        
+
+</style>
+
+</head>
+<body style="background-color:beige">
+    
+<div>
+
+    <form id="myForm">
+
+ <div style="background-color: greenyellow;
+    height:150px;">
+    <img class="logo" src="photos/edu-rise_logo.png">
+    <p class="tagline">"Empowering the Unreached Through Education."</p>
+</div>
+
+    <div style="display: grid;
+    grid-template-columns: 1fr 1fr;">
+<div>
+    <p class="enter_credentials">Please Enter Your credentials : -</p>
+
+    <label for="email"></label>
+    <input class="l1" type="email" id="email" name="email" placeholder="enter your email">
+    <span id="emailError" class="error"></span><br><br>
+
+    <label for="password"></label>
+    <input class="l2" type="password" id="password" name="password" placeholder="Enter your password">
+    <span id="passwordError" class="error"></span><br><br>
+
+    <button class="login_button" type="button" onclick="validateForm()">login</button>
+    <p class="dont_have_account">Don't Have Account?</p> <button class="sign_up_button" type="button">sign-up</button>
+
+      </div>
+        <div>
+            <img style="width: 100%;
+            height: 600px;" 
+            src="photos/smiling_children_face_img.png">
+            <p>
+
+            </p>
+        </div>
+
+     
+    </div> 
+    </form> 
+
+    <script>
+        function validateForm(){
+            document.getElementById("emailError").textContent= "";
+            document.getElementById("passwordError").textContent= "";
+
+            let isvalid = true;
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern=/^[a-zA-Z0-9._%+-]+@[gmail|yahoo|outlook|kiet]+\.[a-zA-Z]{2,4}$/;
+            if(email===""){
+                document.getElementById("emailError").textContent = "Email is required.";
+                isvalid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent= "Invalid email format.";
+                isvalid = false;
+            }
+            // password validation
+             const password = document.getElementById("password").value.trim();
+             
+            if (password === "") {
+             document.getElementById("passwordError").textContent = "Password required.";
+             isvalid = false;
+            } else if (password.length < 6) {
+            document.getElementById("passwordError").textContent = "Password must be atleast 6 characters long ";
+           isvalid = false;
+           }
+
+           if(isvalid) {
+            alert("Logged-In successfully!");
+            window.location.href="home_page.html";
+           }
+        }
+
+
+    </script>
+  
+
+</body>
+</html>
