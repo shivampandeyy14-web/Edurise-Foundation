@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volunteer page</title>
+    <style>
+    .header{
+        height: 150px;
+        width: 100%;
+        background-color:greenyellow;
+    }
+    .h1{
+        width: 200px;
+            height: 100px;
+    }
+    .h2{
+         font-size: 30px;
+            margin-top: 0px;
+            font-weight: bold;
+    }
+
+
+    .about_us,.volunteer,.our_work,.contact_us,.log_out{
+        justify-content: center;
+        align-items: center;
+        font-size: 23px;
+        font-weight: bold;
+        margin-top: 50px;
+        
+    }
+
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{
+        width:300px;
+        height: 50px;
+        margin-left:30px;
+        margin-top: 30px;
+        border-radius: 6px;
+        border-width: 2px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .c9{
+        width: 600px;
+        height: 65px;
+        margin-left: 30px;
+        border-radius: 8px;
+        border-width: 2px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .c10{
+         width: 600px;
+        height: 75px;
+        margin-left: 30px;
+        border-radius: 10px;
+        border-width: 2px;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .Register_button{
+        border-width: 2px;
+        width: 120px;
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 250px;
+        border-radius: 5px;
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.15s;
+        color: 0.15s;
+    }
+    .Register_button:Hover{
+     color:white;
+     background-color: red;
+    }
+    .donation_box{
+        height: 300px;
+    }
+    
+        
+    
+    .donate_button{
+        width: 200px;
+        height: 80px;
+        border-radius: 12px;
+        color: red;
+        background-color: white;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 25px;
+        cursor: pointer;
+        transition: background-color 0.15s;
+        color: 0.15s;
+    }
+    .donate_button:hover{
+      color: white;
+      background-color: red;
+    }
+   
+
+   
+    
+
+    </style>
+</head>
+<body style="background-color:beige;">
+    <div class="header" style="display: grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr">
+<div>
+    <img class="h1" src="photos/edu-rise_logo.png">
+    <p class="h2">Edu-Rise Foundation</p>
+</div>
+<a href="home_page.html">
+    <p class="about_us">About Us</p></a>
+
+<a href="our_work.html"><p class="our_work">Our Work</p></a>
+
+<a href="volunteer_page_with_css.html"><p class="volunteer">Join as volunteer!</p></a>
+
+<a href="Contact_us_page.html"><p class="contact_us">Contact Us</p></a>
+<a href="login_page_with_validation.html"><p class="log_out">Log-out</p></a>
+</div>
+   
+    <div style="display: grid;
+    grid-template-columns: 1fr 1fr;">
+        <div style="
+        height:800px;">
+        <div>
+        <input class="c1" type="text" placeholder="Your Name">
+        <input class="c2" type="text" placeholder="Your Email-ID">
+        </div>
+        <div>
+            <input class="c3" type="text" placeholder="Phone Number">
+            <input class="c4" type=" text" placeholder="Alternate Phone Number">
+        </div>
+        <div>
+            <input class="c5" type="text" placeholder="Current Address">
+            <input class="c6" type="text" placeholder="Permanent Address">
+        </div>
+        <div>
+            <input class="c7" type="text" placeholder="Occupation">
+            <input class="c8" type="text" placeholder="Educational Qualification">
+        </div>
+        <div>
+            <input class="c9" type="text" placeholder="Skills">
+        </div>
+        <div>
+            <input class="c10" type="text" placeholder="Suggestions">
+        </div>
+
+        
+        <button class="Register_button" type="button">Register</button>
+        
+        
+        
+        
+    </div>
+        <div style=" height: 800px;">
+        <div>
+            <img src="photos/volunteer_image.png">
+            <div class="donation_box">
+             
+                <button class="donate_button" type="button" placeholder="Donate" onclick='location.href="qr_page.html"'>Donate</button>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+
+    
+</body>
+</html>
